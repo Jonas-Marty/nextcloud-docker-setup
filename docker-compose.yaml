@@ -52,7 +52,7 @@ services:
     restart: unless-stopped
     volumes:
       - ${HOST_NEXTCLOUD_HTML_PATH:-/work/nextcloud/nextcloud_html}:/var/www/html:ro
-      - ${HOST_NEXTCLOUD_WEB_CONF_PATH:-./web/nginx.conf}:/etc/nginx/nginx.conf:ro
+      - ${HOST_NEXTCLOUD_WEB_CONF_PATH:-/work/nextcloud/web/nginx.conf}:/etc/nginx/nginx.conf:ro
     depends_on:
       - app
 
